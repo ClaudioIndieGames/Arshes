@@ -4,6 +4,6 @@ var $plugins =
 [
 {"name":"Community_Basic","status":false,"description":"Plugin used to set basic parameters.","parameters":{"cacheLimit":"20","screenWidth":"","screenHeight":"","changeWindowWidthTo":"","changeWindowHeightTo":"","renderingMode":"auto","alwaysDash":"off"}},
 {"name":"MadeWithMv","status":false,"description":"Show a Splash Screen \"Made with MV\" and/or a Custom Splash Screen before going to main screen.","parameters":{"Show Made With MV":"true","Made with MV Image":"MadeWithMv","Show Custom Splash":"false","Custom Image":"","Fade Out Time":"120","Fade In Time":"120","Wait Time":"160"}},
-{"name":"$MUSH_MenuOptionScreenResolution_P1","status":true,"description":"[v.1.03] Adds the screen resolution option.","parameters":{"Resolution Command Name":"Screen Resolution","Resolution Options":"[ [1280, 720], [1480, 720] ]","Scale Graphics":"false","Reposition Sprites":"true"}},
-{"name":"FullScreen_Web","status":true,"description":"Fit to Browser v1.00","parameters":{"Minimum Width":"640","Minimum Height":"480","Maximum Width":"1024","Maximum Height":"768"}}
+{"name":"$MUSH_MenuOptionScreenResolution_P1","status":true,"description":"[v.1.03] Adds the screen resolution option.","parameters":{"Resolution Command Name":"Screen Resolution","Resolution Options":"[ [1280, 720], [1480, 720], [2960, 1440]]","Scale Graphics":"false","Reposition Sprites":"true"}},
+{"name":"FullScreen_Web","status":false,"description":"Fit to Browser v1.00","parameters":{"Minimum Width":"640","Minimum Height":"480","Maximum Width":"1024","Maximum Height":"768"}}
 ];
