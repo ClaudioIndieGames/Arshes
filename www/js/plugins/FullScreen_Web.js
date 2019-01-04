@@ -35,6 +35,8 @@ AmyPond.minHeight = Number(AmyPond.parameters['Minimum Height'] || 0);
 AmyPond.maxWidth = Number(AmyPond.parameters['Maximum Width'] || 0);
 AmyPond.maxHeight = Number(AmyPond.parameters['Maximum Height'] || 0);
 
+var elem = document.AmyPond;
+
 /* View in fullscreen */
 function openFullscreen() {
   if (elem.requestFullscreen) {
@@ -99,7 +101,7 @@ AmyPond.resize = function() {
 
    window.resizeBy(AmyPond.w, AmyPond.h);
 };
-AmyPond.openFullscreen()
+
 AmyPond.resize();
 
 //=============================================================================
