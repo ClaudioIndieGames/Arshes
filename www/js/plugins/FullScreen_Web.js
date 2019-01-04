@@ -37,7 +37,7 @@ AmyPond.maxHeight = Number(AmyPond.parameters['Maximum Height'] || 0);
 
 AmyPond.resize = function() {
 
-    AmyPond.w = window.innerWidth
+    AmyPond.w = window.outerWidth
     || document.documentElement.clientWidth
     || document.body.clientWidth;
 
