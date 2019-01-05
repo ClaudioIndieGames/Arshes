@@ -67,10 +67,10 @@ AmyPond.resize = function() {
         }
     }
     
-    SceneManager._screenWidth = AmyPond.w - 144; //Math.round(768/AmyPond.h)
-    SceneManager._screenHeight = AmyPond.h - 144;
-    SceneManager._boxWidth = AmyPond.w - 144;
-    SceneManager._boxHeight = AmyPond.h - 144;
+    SceneManager._screenWidth = (AmyPond.w - 138) * Math.round(800/AmyPond.w);
+    SceneManager._screenHeight = (AmyPond.h - 144) * Math.round(600/AmyPond.h);
+    SceneManager._boxWidth = (AmyPond.w - 138) * Math.round(800/AmyPond.w);
+    SceneManager._boxHeight = (AmyPond.h - 144) * Math.round(600/AmyPond.h);;
     window.resizeBy(AmyPond.w, AmyPond.h);
 };
 
