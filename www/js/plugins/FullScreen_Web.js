@@ -69,8 +69,8 @@ AmyPond.resize = function() {
 
     SceneManager._screenWidth = AmyPond.w;
     SceneManager._screenHeight = AmyPond.h;
-    SceneManager._boxWidth = AmyPond.w;
-    SceneManager._boxHeight = AmyPond.h;
+    SceneManager._boxWidth = AmyPond.w / 8;
+    SceneManager._boxHeight = AmyPond.h / 8;
    window.resizeBy(AmyPond.w, AmyPond.h);
 };
 
