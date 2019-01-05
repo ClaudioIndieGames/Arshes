@@ -35,7 +35,6 @@ AmyPond.minHeight = Number(AmyPond.parameters['Minimum Height'] || 0);
 AmyPond.maxWidth = Number(AmyPond.parameters['Maximum Width'] || 0);
 AmyPond.maxHeight = Number(AmyPond.parameters['Maximum Height'] || 0);
 
-
 AmyPond.resize = function() {
     AmyPond.w = window.screen.width * window.devicePixelRatio;  //window.innerWidth
     //|| document.documentElement.clientWidth
@@ -72,8 +71,11 @@ AmyPond.resize = function() {
     SceneManager._boxHeight = Math.round((AmyPond.h * 816)/AmyPond.w);
     window.resizeBy(AmyPond.w,AmyPond.h);
 };
-
+var elem = document.documentElement;
 AmyPond.resize();
+elem.webkitRequestFullscreen();
+elem.msRequestFullscreen();
+elem.requestFullscreen();
 //=============================================================================
 // End of File
 //=============================================================================
