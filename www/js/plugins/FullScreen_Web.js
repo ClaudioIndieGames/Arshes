@@ -34,19 +34,7 @@ AmyPond.minWidth = Number(AmyPond.parameters['Minimum Width'] || 0);
 AmyPond.minHeight = Number(AmyPond.parameters['Minimum Height'] || 0);
 AmyPond.maxWidth = Number(AmyPond.parameters['Maximum Width'] || 0);
 AmyPond.maxHeight = Number(AmyPond.parameters['Maximum Height'] || 0);
-var elem = document.documentElement;
-function openFullscreen() {
-  if (elem.requestFullscreen) {
-    elem.requestFullscreen();
-  } else if (elem.mozRequestFullScreen) { /* Firefox */
-    elem.mozRequestFullScreen();
-  } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari and Opera */
-    elem.webkitRequestFullscreen();
-  } else if (elem.msRequestFullscreen) { /* IE/Edge */
-    elem.msRequestFullscreen();
-  }
-} 
-openFullscreen();
+
 
 AmyPond.resize = function() {
     AmyPond.w = window.screen.width * window.devicePixelRatio;  //window.innerWidth
