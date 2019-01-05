@@ -67,10 +67,10 @@ AmyPond.resize = function() {
         }
     }
     
-    SceneManager._screenWidth = Math.round(AmyPond.w * 0.75); 
-    SceneManager._screenHeight = Math.round(AmyPond.h * 0.75);
-    SceneManager._boxWidth = Math.round(AmyPond.w * 0.75);
-    SceneManager._boxHeight = Math.round(AmyPond.h * 0.75);
+    SceneManager._screenWidth = Math.round(AmyPond.w * (0.75/window.devicePixelRatio)); 
+    SceneManager._screenHeight = Math.round(AmyPond.h * (0.75/window.devicePixelRatio));
+    SceneManager._boxWidth = Math.round(AmyPond.w * (0.75/window.devicePixelRatio));
+    SceneManager._boxHeight = Math.round(AmyPond.h * (0.75/window.devicePixelRatio));
     window.resizeBy(AmyPond.w, AmyPond.h);
 };
 
