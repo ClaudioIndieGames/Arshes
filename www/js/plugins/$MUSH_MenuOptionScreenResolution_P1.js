@@ -100,10 +100,10 @@ $mushFeatures.params['MOSR_RepositionSprites']      = eval(nowParameters['Reposi
 //   - Set default screen Resolution
 //==============================================================================================================
 
-SceneManager._screenWidth  = $mushFeatures.params['MOSR_ResolutionOptions'][0][0] + 0;
-SceneManager._screenHeight = $mushFeatures.params['MOSR_ResolutionOptions'][0][1] + 0;
-SceneManager._boxWidth     = $mushFeatures.params['MOSR_ResolutionOptions'][0][0] + 0;
-SceneManager._boxHeight    = $mushFeatures.params['MOSR_ResolutionOptions'][0][1] + 0;
+SceneManager._screenWidth  = window.innerWidth;//$mushFeatures.params['MOSR_ResolutionOptions'][0][0] + 0;
+SceneManager._screenHeight = window.outerHeight;//$mushFeatures.params['MOSR_ResolutionOptions'][0][1] + 0;
+SceneManager._boxWidth     = window.innerWidth;//$mushFeatures.params['MOSR_ResolutionOptions'][0][0] + 0;
+SceneManager._boxHeight    = window.outerHeight;//$mushFeatures.params['MOSR_ResolutionOptions'][0][1] + 0;
 
 var aliasMush_SceneManagerRun = SceneManager.run;
 SceneManager.run = function(sceneClass) {
