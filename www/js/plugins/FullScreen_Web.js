@@ -42,7 +42,7 @@ AmyPond.resize = function() {
     || document.documentElement.clientWidth
     || document.body.clientWidth;
 
-    AmyPond.h = window.innerHeight
+    AmyPond.h = window.outerHeight
     || document.documentElement.clientHeight
     || document.body.clientHeight;
 
@@ -67,8 +67,8 @@ AmyPond.resize = function() {
         }
     }
 
-    SceneManager._screenWidth = AmyPond.w;
-    SceneManager._screenHeight = AmyPond.h;
+    SceneManager._screenWidth = 1280; //AmyPond.w;
+    SceneManager._screenHeight = 720; //AmyPond.h;
     SceneManager._boxWidth = AmyPond.w;
     SceneManager._boxHeight = AmyPond.h;
 
