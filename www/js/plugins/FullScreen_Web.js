@@ -67,8 +67,8 @@ AmyPond.resize = function() {
         }
     }
 
-    SceneManager._screenWidth = 1280; //AmyPond.w;
-    SceneManager._screenHeight = 720; //AmyPond.h;
+    //SceneManager._screenWidth = AmyPond.w;
+    //SceneManager._screenHeight = AmyPond.h;
     SceneManager._boxWidth = AmyPond.w;
     SceneManager._boxHeight = AmyPond.h;
 
