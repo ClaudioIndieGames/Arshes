@@ -72,7 +72,7 @@ AmyPond.resize = function() {
     SceneManager._boxHeight = Math.round((AmyPond.h * 816)/AmyPond.w);
     window.resizeBy(AmyPond.w,AmyPond.h);
 };
-
+var elem = document.documentElement;
 function openFullscreen() {
   if (elem.requestFullscreen) {
     elem.requestFullscreen();
@@ -86,7 +86,7 @@ function openFullscreen() {
 } 
 
 AmyPond.resize();
-document.documentElement.openFullscreen();
+openFullscreen();
 //=============================================================================
 // End of File
 //=============================================================================
