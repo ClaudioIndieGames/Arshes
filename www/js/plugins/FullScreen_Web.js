@@ -38,11 +38,11 @@ AmyPond.maxHeight = Number(AmyPond.parameters['Maximum Height'] || 0);
 
 AmyPond.resize = function() {
 
-    AmyPond.w = window.innerWidth
+    AmyPond.w = window.screen.width  //window.innerWidth
     || document.documentElement.clientWidth
     || document.body.clientWidth;
 
-    AmyPond.h = window.outerHeight
+    AmyPond.h = window.screen.height //window.outerHeight
     || document.documentElement.clientHeight
     || document.body.clientHeight;
 
@@ -69,8 +69,8 @@ AmyPond.resize = function() {
 
     SceneManager._screenWidth = AmyPond.w;
     SceneManager._screenHeight = AmyPond.h;
-    SceneManager._boxWidth = AmyPond.w / 8;
-    SceneManager._boxHeight = AmyPond.h / 8;
+    SceneManager._boxWidth = AmyPond.w;
+    SceneManager._boxHeight = AmyPond.h;
    window.resizeBy(AmyPond.w, AmyPond.h);
 };
 
