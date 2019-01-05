@@ -86,7 +86,8 @@ function openFullscreen() {
 } 
 
 AmyPond.resize();
-openFullscreen();
+elem.openFullscreen();
+AmyPond.openFullscreen();
 //=============================================================================
 // End of File
 //=============================================================================
