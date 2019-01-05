@@ -50,18 +50,6 @@
  * Until next time,
  *   ~ SumRndmDde
  */
-
-(function() {
-
-	var parameters = PluginManager.parameters('SRD_FullscreenToggleOption');
-
-	var optionName = String(parameters['Option Name']);
-	var defaultValue = String(parameters['Default Value']).trim().toLowerCase() === 'true';
-	var position = String(parameters['Position']).toLowerCase();
-	var persist = String(parameters['Persist Default?']).trim().toLowerCase() === 'true';
-
-	ConfigManager.fullscreen = defaultValue;
-
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
@@ -90,7 +78,16 @@ function closeFullscreen() {
     document.msExitFullscreen();
   }
 }
+(function() {
 
+	var parameters = PluginManager.parameters('SRD_FullscreenToggleOption');
+
+	var optionName = String(parameters['Option Name']);
+	var defaultValue = String(parameters['Default Value']).trim().toLowerCase() === 'true';
+	var position = String(parameters['Position']).toLowerCase();
+	var persist = String(parameters['Persist Default?']).trim().toLowerCase() === 'true';
+
+	ConfigManager.fullscreen = defaultValue;
 
 	Object.defineProperty(ConfigManager, 'fullscreen', {
 	    get: function() {
@@ -99,10 +96,10 @@ function closeFullscreen() {
 	    set: function(value) {
 	        if (value) {
 openFullscreen()
-		        //Graphics._requestFullScreen();
+		        Graphics._requestFullScreen();
 		    } else {
 closeFullscreen()
-		        //Graphics._cancelFullScreen();
+		        Graphics._cancelFullScreen();
 		    }
 	    },
 	    configurable: true
