@@ -68,9 +68,9 @@ AmyPond.resize = function() {
     }
     
     SceneManager._screenWidth = 816; //Math.round((AmyPond.w * 600)/AmyPond.h);
-    SceneManager._screenHeight = Math.round((AmyPond.h * 748)/AmyPond.w);
+    SceneManager._screenHeight = Math.round((AmyPond.h * 816)/AmyPond.w); //748
     SceneManager._boxWidth = 816;
-    SceneManager._boxHeight = Math.round((AmyPond.h * 748)/AmyPond.w);
+    SceneManager._boxHeight = Math.round((AmyPond.h * 816)/AmyPond.w);
     window.resizeBy(AmyPond.w,AmyPond.h);
 };
 
