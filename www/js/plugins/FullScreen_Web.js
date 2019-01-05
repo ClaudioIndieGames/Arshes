@@ -38,13 +38,13 @@ AmyPond.maxHeight = Number(AmyPond.parameters['Maximum Height'] || 0);
 
 AmyPond.resize = function() {
 
-    AmyPond.w = window.screen.width  //window.innerWidth
-    || document.documentElement.clientWidth
-    || document.body.clientWidth;
+    AmyPond.w = window.screen.width * window.devicePixelRatio;  //window.innerWidth
+    //|| document.documentElement.clientWidth
+    //|| document.body.clientWidth;
 
-    AmyPond.h = window.screen.height //window.outerHeight
-    || document.documentElement.clientHeight
-    || document.body.clientHeight;
+    AmyPond.h = window.screen.height * window.devicePixelRatio; //window.outerHeight
+    //|| document.documentElement.clientHeight
+    //|| document.body.clientHeight;
 
     if (AmyPond.minWidth != 0) {
         if (AmyPond.w < AmyPond.minWidth) {
@@ -66,12 +66,12 @@ AmyPond.resize = function() {
             AmyPond.h = AmyPond.maxHeight;
         }
     }
-
-    SceneManager._screenWidth = AmyPond.w;
-    SceneManager._screenHeight = AmyPond.h;
-    SceneManager._boxWidth = AmyPond.w;
-    SceneManager._boxHeight = AmyPond.h;
-   window.resizeBy(AmyPond.w, AmyPond.h);
+    
+    SceneManager._screenWidth = Math.round(AmyPond.w * 0.75); 
+    SceneManager._screenHeight = Math.round(AmyPond.h * 0.75);
+    SceneManager._boxWidth = Math.round(AmyPond.w * 0.75);
+    SceneManager._boxHeight = Math.round(AmyPond.h * 0.75);
+    window.resizeBy(AmyPond.w, AmyPond.h);
 };
 
 AmyPond.resize();
