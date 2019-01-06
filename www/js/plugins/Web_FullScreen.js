@@ -7,6 +7,7 @@ var elem = document.documentElement;
 
 /* View in fullscreen */
 function openFullscreen() {
+  document.getElementById("screen_b").style.opacity = 0;
   if(elem.requestFullScreen) {
     elem.requestFullScreen();
   } else if(elem.mozRequestFullScreen) {
@@ -20,6 +21,7 @@ function openFullscreen() {
 
 /* Close fullscreen */
 function closeFullscreen() {
+  document.getElementById("screen_b").style.opacity = 1;
   if (document.exitFullscreen) {
     document.exitFullscreen();
   } else if (document.mozCancelFullScreen) { /* Firefox */
