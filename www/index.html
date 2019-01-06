@@ -9,11 +9,23 @@
         <link rel="apple-touch-icon" href="icon/icon.png">
         <link rel="stylesheet" type="text/css" href="fonts/gamefont.css">
         <title>Arshes</title>
-<script>
-<!--
-window.open("index.html","fs","fullscreen=yes")
-//-->
-</script> 
+    <style>
+      :-moz-full-screen {
+        background-color: yellow;
+        height: 100%;
+      }
+      :-webkit-full-screen {
+        background-color: yellow;
+        height: 100%;
+      }
+      :-ms-fullscreen {
+        background-color: yellow;
+        height: 100%;
+      }
+      :fullscreen {
+        background-color: yellow;
+        height: 100%;
+      }
     </head>
     <body style="background-color: black">
         <script type="text/javascript" src="js/libs/pixi.js"></script>
