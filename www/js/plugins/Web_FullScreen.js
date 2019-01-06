@@ -5,6 +5,16 @@
 /* Get the documentElement (<html>) to display the page in fullscreen */
 var elem = document.documentElement;
 
+elem.addEventListener('click', function () {
+  if(elem.requestFullScreen) {
+    elem.requestFullScreen();
+  } else if(elem.mozRequestFullScreen) {
+    elem.mozRequestFullScreen();
+  } else if(elem.webkitRequestFullScreen) {
+    elem.webkitRequestFullScreen();
+  }
+}, false);
+
 /* View in fullscreen */
 function openFullscreen() {
   if (elem.requestFullscreen) {
